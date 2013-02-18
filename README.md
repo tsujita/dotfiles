@@ -1,7 +1,7 @@
 # インストール
 ~~~
 cd ~
-git clone git@github.com:atijust/dotfiles.git .dotfiles
+git clone git@github.com:tsujita/dotfiles.git .dotfiles
 ln -s .dotfiles/.bash_profile .bash_profile
 ln -s .dotfiles/.bashrc .bashrc
 ln -s .dotfiles/.gitconfig .gitconfig
@@ -9,6 +9,10 @@ ln -s .dotfiles/.tmux.conf .tmux.conf
 ln -s .dotfiles/.vim .vim
 ln -s .dotfiles/.vimrc .vimrc
 git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+~~~
+
+# Vimプラグインインストール
+~~~
 vim
 :NeoBundleInstall
 :q
