@@ -1,21 +1,3 @@
-# 全てのファイルを無視
-/*
-/.*
-
-# 無視したくないファイル
-!/.bashrc
-!/.bash_profile
-!/.gitconfig
-!/.gitignore
-!/.vim
-!/.vimrc
-!/.tmux.conf
-!/README.md
-!/php-chunked-xhtml
-!/git-completion.bash
-!/bin
-
-# 無視したくないファイルのなかで特別に無視するもの
 /.vim/bundle
 /.vim/.netrwhist
 
