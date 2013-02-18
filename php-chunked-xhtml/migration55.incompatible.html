@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>下位互換性のない変更点</title>
+
+ </head>
+ <body><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="migration55.changes.html">PHP 5.5.x における変更点</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="migration55.new-features.html">新機能</a></div>
+ <div class="up"><a href="migration55.html">PHP 5.4.x から PHP 5.5.x への移行</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div><hr /><div id="migration55.incompatible" class="sect1">
+  <h2 class="title">下位互換性のない変更点</h2>
+  <p class="simpara">
+   既存の PHP5 のコードのほとんどは変更なしで動作するはずですが、
+   以下の下位互換性のない変更点については注意しましょう。
+  </p>
+  
+  <div class="sect2" id="migration55.incompatible.windows">
+   <h3 class="title">Windows XP および 2003 のサポートの終了</h3>
+   
+   <p class="para">
+    Windows XP および 2003 はサポートされなくなります。
+    Windows 版の PHP は、Windows Vista 以降でしか動かなくなります。
+   </p>
+  </div>
+
+  <div class="sect2" id="migration55.incompatible.case">
+   <h3 class="title">大文字小文字を区別しない比較がロケールごとに変わる</h3>
+   
+   <p class="para">
+    関数名やクラス名そして定数名は大文字小文字を区別しませんでしたが、
+    このマッチ方法が ASCII のルールに基づいてロケールを考慮した動きに変わります。
+    ラテンアルファベットを通常とは異なる照合規則で使っている言語
+    (トルコ語やアゼルバイジャン語など) にきちんと対応するようになりました。
+   </p>
+   <p class="para">
+    これは、マルチバイト文字セット (UTF-8 も含む) で非 ASCII
+    文字に対して大文字小文字を区別しないマッチングをしているコードで問題になるかもしれません。
+    ヨーロッパ諸国語のアクセント記号などがこれにあてはまります。
+    英語以外の非 ASCII コードベースを使っている場合は、
+    無意識のうちにこの振る舞いに依存してしまっていないかどうかを確かめてから
+    PHP 5.5 を実運用環境に投入するようにしましょう。
+   </p>
+  </div>
+
+  <div class="sect2" id="migration55.incompatible.guid">
+   <h3 class="title">PHP ロゴの GUID の削除</h3>
+
+   <p class="para">
+    PHP でいろいろなロゴを出すために使われていた GUID が削除されました。
+    それに伴って、GUID を返す関数も削除されました。削除された関数は次のとおりです。
+   </p>
+
+   <ul class="itemizedlist">
+    <li class="listitem">
+     <span class="simpara">
+       <span class="function"><a href="function.php-logo-guid.html" class="function">php_logo_guid()</a></span>
+     </span>
+    </li>
+    <li class="listitem">
+     <span class="simpara">
+       <span class="function"><strong>php_egg_logo_guid()</strong></span>
+     </span>
+    </li>
+    <li class="listitem">
+     <span class="simpara">
+       <span class="function"><strong>php_real_logo_guid()</strong></span>
+     </span>
+    </li>
+    <li class="listitem">
+     <span class="simpara">
+       <span class="function"><a href="function.zend-logo-guid.html" class="function">zend_logo_guid()</a></span>
+     </span>
+    </li>
+   </ul>
+  </div>
+ </div><hr /><div class="manualnavbar" style="text-align: center;">
+ <div class="prev" style="text-align: left; float: left;"><a href="migration55.changes.html">PHP 5.5.x における変更点</a></div>
+ <div class="next" style="text-align: right; float: right;"><a href="migration55.new-features.html">新機能</a></div>
+ <div class="up"><a href="migration55.html">PHP 5.4.x から PHP 5.5.x への移行</a></div>
+ <div class="home"><a href="index.html">PHP Manual</a></div>
+</div></body></html>

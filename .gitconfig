@@ -1,0 +1,13 @@
+[http]
+	sslVerify = false
+[user]
+	email = tsujita.shou@gmail.com
+	name = tsujita
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	mg = merge --no-ff
+[push]
+	default = tracking
