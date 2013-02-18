@@ -19,7 +19,11 @@ alias ls='ls --color=tty'
 alias la='ls -a'
 alias ll='ls -alh'
 
-source ~/.dotfiles/git-completion.bash
+if [ `uname` = "Darwin" ]; then
+    source /usr/local/etc/bash_completion.d/git-completion.bash
+else
+    source ~/.dotfiles/git-completion.bash
+fi
 
 PS1='[\u@\H \W$(__git_ps1 " (%s)")]\$ '
 
