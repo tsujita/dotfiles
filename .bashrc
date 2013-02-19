@@ -20,7 +20,8 @@ alias la='ls -a'
 alias ll='ls -alh'
 
 if [ `uname` = "Darwin" ]; then
-    source /usr/local/etc/bash_completion.d/git-completion.bash
+    source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+    source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 else
     source ~/.dotfiles/git-completion.bash
 fi

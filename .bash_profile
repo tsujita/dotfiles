@@ -7,12 +7,10 @@ fi
 
 # User specific environment and startup programs
 
-export PATH="/usr/local/bin:$PATH"
-
 if [ `uname` = "Darwin" ]; then
-    # coreutilsのコマンドをプレフィックス無しで参照
-    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+    export PATH="$(brew --prefix)/bin:$PATH"
+    export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+    export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
 
 if [ -d "$HOME/bin" ] ; then
